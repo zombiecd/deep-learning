@@ -3,7 +3,7 @@
 lab/ 是"原理解析"代码（反汇编、benchmark）；这里是**业务落地**代码——拿来就能用、或稍改就能用在你项目里的实现。每个都对应一面承重墙，把原理落到能跑的东西上。全部带测试，且通过 `-race` 数据竞争检测。
 
 ```bash
-cd topics/concurrency/demos
+cd topics/并发原理/demos
 go test -v -race ./...          # 跑全部（-race 验证无数据竞争）
 # Apple Silicon 且 go env GOARCH 非 arm64 时，显式原生执行：
 GOARCH=arm64 GOOS=darwin go test -v -race ./...
@@ -11,10 +11,10 @@ GOARCH=arm64 GOOS=darwin go test -v -race ./...
 
 | 文件 | 是什么 | 真实场景 | 对应墙 |
 |---|---|---|---|
-| `config.go` | 配置热加载（COW + atomic.Pointer） | 配置中心推送 / 文件热更，海量 goroutine 无锁读 | [E](../05-paradigms.md) · [A](../01-memory-model.md) |
-| `ratelimit.go` | 令牌桶 + 滑动窗口限流 | 接口限流、突发削峰 | [D](../04-blocking-scheduling.md) |
-| `pool.go` | channel 对象池 | 数据库连接、长连接等限量资源复用 | [E](../05-paradigms.md) |
-| `singleflight.go` | 合并并发请求 | 缓存击穿防护：热点 key 失效时只放一个请求重建 | [A](../01-memory-model.md) · [D](../04-blocking-scheduling.md) |
+| `config.go` | 配置热加载（COW + atomic.Pointer） | 配置中心推送 / 文件热更，海量 goroutine 无锁读 | [E](../05-范式之争.md) · [A](../01-内存模型.md) |
+| `ratelimit.go` | 令牌桶 + 滑动窗口限流 | 接口限流、突发削峰 | [D](../04-阻塞与调度.md) |
+| `pool.go` | channel 对象池 | 数据库连接、长连接等限量资源复用 | [E](../05-范式之争.md) |
+| `singleflight.go` | 合并并发请求 | 缓存击穿防护：热点 key 失效时只放一个请求重建 | [A](../01-内存模型.md) · [D](../04-阻塞与调度.md) |
 
 ## 每个 demo 的一句话精髓
 

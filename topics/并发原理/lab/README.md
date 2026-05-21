@@ -18,7 +18,7 @@ lab/
 把同一段 Go 分别编译到两种架构，再反汇编对照。
 
 ```bash
-cd topics/concurrency/lab
+cd topics/并发原理/lab
 
 # 交叉编译出两个架构的二进制
 GOARCH=amd64 GOOS=linux  go build -o /tmp/lab_amd64 .
@@ -45,7 +45,7 @@ go tool objdump -s 'main\.doStore' /tmp/lab_arm64    # atomic.Store
 ## 实验二：竞争如何让性能崩（C / D / E 三面墙）
 
 ```bash
-cd topics/concurrency/lab
+cd topics/并发原理/lab
 
 # 全部 benchmark，对比 1 核 vs 8 核
 go test -bench=. -benchtime=300ms -cpu=1,8
@@ -88,8 +88,8 @@ ConfigAtomicPointer    6.9 ns      1.3 ns     ← E：COW 只读同一指针，�
 
 | 实验 | 实证哪面墙 |
 |---|---|
-| 反汇编 doLoad/doStore 跨架构对比 | [A 内存模型](../01-memory-model.md) · [B 原子性](../02-atomicity-hardware.md) |
-| 反汇编 doAdd/doCAS | [B 原子性](../02-atomicity-hardware.md) |
-| Shared/Sharded/FalseSharing/Padded | [C 缓存一致性](../03-cache-coherence.md) |
-| Atomic/Mutex/Channel Counter | [D 阻塞与调度](../04-blocking-scheduling.md) |
-| ConfigRWMutex/ConfigAtomicPointer | [E 范式之争](../05-paradigms.md) |
+| 反汇编 doLoad/doStore 跨架构对比 | [A 内存模型](../01-内存模型.md) · [B 原子性](../02-原子性.md) |
+| 反汇编 doAdd/doCAS | [B 原子性](../02-原子性.md) |
+| Shared/Sharded/FalseSharing/Padded | [C 缓存一致性](../03-缓存一致性.md) |
+| Atomic/Mutex/Channel Counter | [D 阻塞与调度](../04-阻塞与调度.md) |
+| ConfigRWMutex/ConfigAtomicPointer | [E 范式之争](../05-范式之争.md) |

@@ -64,11 +64,11 @@
 
 | 墙 | 文档 | 状态 |
 |---|---|---|
-| A 内存模型 | [`01-memory-model.md`](./01-memory-model.md) | ✅ 已成文 |
-| B 原子性硅层 | [`02-atomicity-hardware.md`](./02-atomicity-hardware.md) | ✅ 已成文 |
-| C 核越多越慢 | [`03-cache-coherence.md`](./03-cache-coherence.md) | ✅ 已成文 |
-| D 抢不到锁之后 | [`04-blocking-scheduling.md`](./04-blocking-scheduling.md) | ✅ 已成文 |
-| E 范式之争 | [`05-paradigms.md`](./05-paradigms.md) | ✅ 已成文 |
+| A 内存模型 | [`01-内存模型.md`](./01-内存模型.md) | ✅ 已成文 |
+| B 原子性硅层 | [`02-原子性.md`](./02-原子性.md) | ✅ 已成文 |
+| C 核越多越慢 | [`03-缓存一致性.md`](./03-缓存一致性.md) | ✅ 已成文 |
+| D 抢不到锁之后 | [`04-阻塞与调度.md`](./04-阻塞与调度.md) | ✅ 已成文 |
+| E 范式之争 | [`05-范式之争.md`](./05-范式之争.md) | ✅ 已成文 |
 | 实践 lab | [`lab/`](./lab/) | ✅ 反汇编 + benchmark，可亲手复现 |
 | 业务 demos | [`demos/`](./demos/) | ✅ 配置热加载/限流/对象池/singleflight，带测试过 -race |
 
