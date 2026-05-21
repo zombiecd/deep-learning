@@ -66,7 +66,7 @@
 | B 原子性硅层 | [`02-atomicity-hardware.md`](./02-atomicity-hardware.md) | ✅ 已成文 |
 | C 核越多越慢 | [`03-cache-coherence.md`](./03-cache-coherence.md) | ✅ 已成文 |
 | D 抢不到锁之后 | [`04-blocking-scheduling.md`](./04-blocking-scheduling.md) | ✅ 已成文 |
-| E 范式之争 | `05-paradigms.md` | ⏳ 待开 |
+| E 范式之争 | [`05-paradigms.md`](./05-paradigms.md) | ✅ 已成文 |
 
 ## 延伸阅读（一手）
 - [Go Memory Model](https://go.dev/ref/mem)
