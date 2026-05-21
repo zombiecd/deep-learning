@@ -63,7 +63,7 @@
 | 墙 | 文档 | 状态 |
 |---|---|---|
 | A 内存模型 | [`01-memory-model.md`](./01-memory-model.md) | ✅ 已成文 |
-| B 原子性硅层 | `02-atomicity-hardware.md` | ⏳ 待开 |
+| B 原子性硅层 | [`02-atomicity-hardware.md`](./02-atomicity-hardware.md) | ✅ 已成文 |
 | C 核越多越慢 | `03-cache-coherence.md` | ⏳ 待开 |
 | D 抢不到锁之后 | `04-blocking-scheduling.md` | ⏳ 待开 |
 | E 范式之争 | `05-paradigms.md` | ⏳ 待开 |
